@@ -363,31 +363,6 @@ Since I was now the owner, the `onlyOwner` check was satisfied.
 The entire Ether balance of the contract was then transferred to the current owner, which was my address.
 
 ---
-
-## 7. Completing the Level
-
-The complete sequence was:
-
-```text
-Inspect the contract
-        ↓
-Notice the original owner has 1000 ETH
-        ↓
-See that contribute() cannot realistically beat it
-        ↓
-Find receive()
-        ↓
-Make a small contribution
-        ↓
-Send Ether directly to the contract
-        ↓
-receive() changes owner to msg.sender
-        ↓
-Call withdraw()
-        ↓
-Drain the contract
-```
-
 ### Final Commands
 
 Make a contribution:
