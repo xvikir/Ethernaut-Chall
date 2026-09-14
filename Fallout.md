@@ -267,7 +267,6 @@ This confirmed that the call to `Fal1out()` had successfully changed the ownersh
 
 ## 6. Completing the Level
 
-The important part of this level was not the allocation or transfer logic.
 
 The vulnerability came from an old-style constructor declaration being accidentally written with a typo.
 
