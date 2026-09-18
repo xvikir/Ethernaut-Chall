@@ -470,41 +470,4 @@ and the owner was changed to my wallet.
 
 Finally, I checked the `owner` of the Telephone instance to confirm that it had changed.
 
-The main thing I learned from this level was the difference between `tx.origin` and `msg.sender`.
-
-Before this level, I was thinking they were basically the same thing. The important difference is that:
-
-```text
-tx.origin
-```
-
-stays as the original account that started the transaction, while:
-
-```text
-msg.sender
-```
-
-changes to the immediate caller at each contract call.
-
-That gave me the exploit:
-
-```text
-My Wallet
-    ↓
-Attack Contract
-    ↓
-Telephone
-
-tx.origin  = My Wallet
-msg.sender = Attack Contract
-
-tx.origin != msg.sender
-        ↓
-owner = My Wallet
-```
-
-After confirming that I had become the owner, I submitted the level instance in Ethernaut.
-
----
-
 ## Level 4 — Completed ✅
